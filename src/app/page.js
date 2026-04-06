@@ -502,7 +502,7 @@ export default function Page(){
                 <nav className="nav">
                     <div className="nav-brand">
                         <div className="nav-mark">◈</div>
-                        <span className="nav-name">Ledger</span>
+                        <span className="nav-name">Zorvyn</span>
                     </div>
 
                     <div className="nav-right">
