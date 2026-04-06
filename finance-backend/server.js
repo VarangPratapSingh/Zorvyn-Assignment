@@ -420,10 +420,13 @@ app.use((err,req,res,next)=>{
 // Start server
 const startServer=async()=>{
     try{
-        await mongoose.connect(process.env.MONGO_URI,{serverSelectionTimeoutMS:MONGO_TIMEOUT});
-        console.log(`[${APP_NAME}] starting on port ${PORT}`);
+        await mongoose.connect(process.env.MONGO_URI,{serverSelectionTimeoutMS:5000});
         console.log("MongoDB Is connected");
-        app.listen(PORT,()=>console.log(`Server running on port : ${PORT}`));
+
+        app.listen(process.env.PORT || PORT, "0.0.0.0", () =>
+            console.log(`Server running on port : ${process.env.PORT || PORT}`)
+        );
+
     }catch(err){
         console.error("Error:",err);
         process.exit(1);
