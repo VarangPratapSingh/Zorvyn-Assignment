@@ -444,7 +444,7 @@ export default function Page(){
                 <div className="auth-card">
                     <div className="auth-logo">
                         <div className="auth-logo-mark">◈</div>
-                        <span className="auth-logo-name">Ledger</span>
+                        <span className="auth-logo-name">Zorvyn</span>
                     </div>
 
                     <h1 className="auth-heading">{isRegister?"Create account":"Welcome back"}</h1>
